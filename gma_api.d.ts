@@ -42,13 +42,13 @@ declare namespace gma {
     /** Get Hardware type: "GMA2" or "GMA3" */
     function gethardwaretype(): string
 
-    /** Import Xml file to Lua table */
-    // commented out becase of reserved keyword import
-    // function import(filename: string, subfolder: string): LuaTable;
+    /** Import Xml file to Lua table
+     * @customName import */
+    function import_xml(filename: string, subfolder?: string): LuaTable
 
-    /** Export Lua table to Xml file */
-    // commented out becase of reserved keyword export
-    // function export(filename: string, data: LuaTable): void;
+    /** Export Lua table to Xml file
+     * @customName export */
+    function export_xml(filename: string, data: LuaTable): void
 
     /** Export Lua table to Csv file */
     function export_csv(filename: string, data: LuaTable): void
